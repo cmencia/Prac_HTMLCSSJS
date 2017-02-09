@@ -59,6 +59,28 @@ body {
 
 }
 
+.header > .slider-tittle{
+    position: absolute;
+    left: 0;
+    top:40%;
+    color: white;
+    text-align: center;
+    font-size: 90px;
+
+}
+
+.header > .slider-img{
+    max-width: 100%;
+    background-image: url("./images/sliderimg.jpg") ;
+    height: 100vh;
+    background-size:100% 100%;
+    background-position: center center;
+}
+
+.header > .slider-cite{
+
+}
+
 .clearfix:after{
     content: " ";
     visibility: hidden;
