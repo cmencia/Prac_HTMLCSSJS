@@ -40,7 +40,7 @@ body {
 
 }
 
-.navbar > .navbar-list > .navbar-item.active{
+.navbar > .navbar-list > .navbar-item.active > .navbar-link{
     color: #F7F7F7;
     background-color: rebeccapurple;
 }
