@@ -13,17 +13,32 @@ body {
     margin: 0;
 }
 
-.page{
+.header > .slider-tittle{
+    position: absolute;
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    top:40%;
+    color: white;
+    text-align: center;
+    font-size: 80px;
+
 }
 
-.navbar{
+.header > .slider-img{
+    max-width: 100%;
+    background-image: url("./images/sliderimg.jpg") ;
+    height: 100vh;
+    background-size:100% 100%;
+    background-position: center center;
+}
+
+.header > .slider-cite{
+    position: absolute;
     width: 100%;
-    position: fixed;
-    background-color: #F7F7F7;
-    top:0;
+    top:55%;
+    color: white;
+    text-align: center;
+    font-size: 28px;
+
 }
 
 .navbar > .navbar-list{
@@ -42,7 +57,7 @@ body {
 
 .navbar > .navbar-list > .navbar-item.active > .navbar-link{
     color: #F7F7F7;
-    background-color: rebeccapurple;
+    background-color: #888888;
 }
 
 .navbar > .navbar-list > .navbar-item > .navbar-link {
@@ -55,30 +70,85 @@ body {
 
 .navbar > .navbar-list > .navbar-item > .navbar-link:hover {
     color: #F7F7F7;
-    background-color: rebeccapurple;
+    background-color: #888888;
 
 }
 
-.header > .slider-tittle{
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-container{
+    padding-top: 30px;
+    padding-bottom: 80px;
+    min-height: 400px;
+}
+
+.row-flex{
+    display: flex;
+    flex-flow: nowrap;
+}
+
+.flex-item {
+    justify-content: center;
+    flex: 1;
+}
+
+p.text-divisor:before{
     position: absolute;
+    top: 10px;
     left: 0;
-    top:40%;
-    color: white;
-    text-align: center;
-    font-size: 90px;
+    width: 2px;
+    height: 41px;
+    background-color: #1ae8f4;
+    content: "";
+    display: inline-block;
+}
+
+.me-tittle{
+    font-family: 'Cinzel', serif;
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 1.5;
+    font-weight: bold;
 
 }
 
-.header > .slider-img{
+.container-meimg{
+    align-items: center; /*revisar no me centra el contenido*/
+
+}
+
+.container-meimg > .me-img{
+    width: 400px;
+    height: auto;
     max-width: 100%;
-    background-image: url("./images/sliderimg.jpg") ;
-    height: 100vh;
-    background-size:100% 100%;
-    background-position: center center;
+    padding-left: 15px;
+    padding-right: 15px;
+    align-self: center;
 }
 
-.header > .slider-cite{
+.me-description{
+    font-family: 'Roboto Condensed',sans-serif;
+    line-height: 1.55;
+    font-size: 18px;
+    color: #888888;
+}
 
+.navbar{
+    width: 100%;
+    position: fixed;
+    background-color: #F7F7F7;
+    top:0;
+}
+
+
+.footer{
+    text-align: center;
 }
 
 .clearfix:after{
