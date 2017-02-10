@@ -1,8 +1,8 @@
-*{
+* {
     box-sizing: border-box;
 }
 
-html{
+html {
     margin: 0;
 
 }
@@ -13,35 +13,35 @@ body {
     margin: 0;
 }
 
-.header > .slider-tittle{
+.header > .slider-tittle {
     position: absolute;
     width: 100%;
-    top:40%;
+    top: 40%;
     color: white;
     text-align: center;
     font-size: 80px;
 
 }
 
-.header > .slider-img{
+.header > .slider-img {
     max-width: 100%;
-    background-image: url("./images/sliderimg.jpg") ;
+    background-image: url("../images/sliderimg.jpg");
     height: 100vh;
-    background-size:100% 100%;
+    background-size: 100% 100%;
     background-position: center center;
 }
 
-.header > .slider-cite{
+.header > .slider-cite {
     position: absolute;
     width: 100%;
-    top:55%;
+    top: 55%;
     color: white;
     text-align: center;
     font-size: 28px;
 
 }
 
-.navbar > .navbar-list{
+.navbar > .navbar-list {
     list-style-type: none;
     margin: 0;
     float: right;
@@ -49,13 +49,13 @@ body {
 
 }
 
-.navbar > .navbar-list > .navbar-item{
+.navbar > .navbar-list > .navbar-item {
     display: inline-block;
     font-size: 16px; /* Le vuelvo a setear su tamaño*/
 
 }
 
-.navbar > .navbar-list > .navbar-item.active > .navbar-link{
+.navbar > .navbar-list > .navbar-item.active > .navbar-link {
     color: #F7F7F7;
     background-color: #888888;
 }
@@ -64,7 +64,7 @@ body {
     display: inline-block;
     text-decoration: none;
     padding: 30px;
-    color: rgba(0,0,0,0.8);
+    color: rgba(0, 0, 0, 0.8);
 
 }
 
@@ -74,20 +74,19 @@ body {
 
 }
 
-
-.container{
+.container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.section-container{
+.section-container {
     padding-top: 30px;
     padding-bottom: 80px;
     min-height: 400px;
 }
 
-.row-flex{
+.row-flex {
     display: flex;
     flex-flow: nowrap;
 }
@@ -97,17 +96,15 @@ body {
     flex: 1;
 }
 
-
-
-.navbar{
+.navbar {
     width: 100%;
     position: fixed;
     background-color: #F7F7F7;
-    top:0;
+    top: 0;
     z-index: 99;
 }
 
-p.text-divisor:before{ /*isn't work*/
+p.text-divisor:before { /*isn't work*/
     position: absolute;
     top: 10px;
     left: 0;
@@ -118,7 +115,7 @@ p.text-divisor:before{ /*isn't work*/
     display: inline-block;
 }
 
-.me-tittle{
+.me-tittle {
     font-family: 'Cinzel', serif;
     font-size: 40px;
     text-transform: uppercase;
@@ -128,16 +125,16 @@ p.text-divisor:before{ /*isn't work*/
 
 }
 
-.container-meimg{
+.container-meimg {
     align-items: center; /*revisar no me centra el contenido*/
     position: relative;
     margin-left: 60px;
-    margin-top: -160px;
+    margin-top: -120px;
     z-index: 10;
 
 }
 
-.container-meimg > .me-img{
+.container-meimg > .me-img {
     width: 400px;
     height: auto;
     max-width: 100%;
@@ -146,14 +143,14 @@ p.text-divisor:before{ /*isn't work*/
     align-self: center;
 }
 
-.me-description{
-    font-family: 'Roboto Condensed',sans-serif;
+.me-description {
+    font-family: 'Roboto Condensed', sans-serif;
     line-height: 1.55;
     font-size: 18px;
     color: #888888;
 }
 
-p.text-divisor:before{ /*isn't work*/
+p.text-divisor:before { /*isn't work*/
     position: absolute;
     top: 10px;
     left: 0;
@@ -164,22 +161,20 @@ p.text-divisor:before{ /*isn't work*/
     display: inline-block;
 }
 
-.studies-box{
+.studies-box {
     padding: 0 30px 0 30px;
 }
 
-.section-reverse{
+.section-reverse {
     background-color: #243238;
     color: white;
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
     padding: 50px 30px 50px 30px;
-    /*min-height: 400px;*/
-    width: 100%;
 
 }
 
-.studies-tittle{
+.studies-tittle {
     font-family: 'Cinzel', serif;
     font-size: 40px;
     text-transform: uppercase;
@@ -189,31 +184,69 @@ p.text-divisor:before{ /*isn't work*/
 
 }
 
-.studies-description{
-    font-family: 'Roboto Condensed',sans-serif;
+.studies-description {
+    font-family: 'Roboto Condensed', sans-serif;
     line-height: 1.55;
     font-size: 18px;
     color: #888888;
 }
 
-.contact-form{
-    background-color: #888888;
+.contact-tittle {
+    font-family: 'Cinzel', serif;
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 1.5;
+    font-weight: bold;
+
+}
+
+.contact-form {
+
     min-width: 300px;
     width: 100%;
     text-align: center;
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 20px;
-    padding-right: 20px;
+
 }
 
-.footer{
-    min-height: 500px;
+.form-item {
+    padding: 14px 30px 14px 30px;
+    font-size: 20px;
+    width: calc(100% - 30px);
+}
+
+.form-text {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.form-textarea {
+    width: calc(100% - 30px);
+    font-size: 20px;
+    padding: 14px 30px 14px 30px;
+
+}
+.form-button{
+    background-color: white;
+    font-size: 20px;
+    padding: 14px 30px 14px 30px;
+    border: 2px solid white;
+    color: #a9a9a9;
+}
+
+.form-button:hover{
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.footer {
+    min-height: 70px;
     text-align: center;
     background-color: grey;
 }
 
-.clearfix:after{
+.clearfix:after {
     content: " ";
     visibility: hidden;
     display: block;
