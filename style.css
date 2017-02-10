@@ -97,7 +97,17 @@ body {
     flex: 1;
 }
 
-p.text-divisor:before{
+
+
+.navbar{
+    width: 100%;
+    position: fixed;
+    background-color: #F7F7F7;
+    top:0;
+    z-index: 99;
+}
+
+p.text-divisor:before{ /*isn't work*/
     position: absolute;
     top: 10px;
     left: 0;
@@ -120,6 +130,10 @@ p.text-divisor:before{
 
 .container-meimg{
     align-items: center; /*revisar no me centra el contenido*/
+    position: relative;
+    margin-left: 60px;
+    margin-top: -160px;
+    z-index: 10;
 
 }
 
@@ -139,16 +153,64 @@ p.text-divisor:before{
     color: #888888;
 }
 
-.navbar{
-    width: 100%;
-    position: fixed;
-    background-color: #F7F7F7;
-    top:0;
+p.text-divisor:before{ /*isn't work*/
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 2px;
+    height: 41px;
+    background-color: #1ae8f4;
+    content: "";
+    display: inline-block;
 }
 
+.studies-box{
+    padding: 0 30px 0 30px;
+}
+
+.section-reverse{
+    background-color: #243238;
+    color: white;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    padding: 50px 30px 50px 30px;
+    /*min-height: 400px;*/
+    width: 100%;
+
+}
+
+.studies-tittle{
+    font-family: 'Cinzel', serif;
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 1.5;
+    font-weight: bold;
+
+}
+
+.studies-description{
+    font-family: 'Roboto Condensed',sans-serif;
+    line-height: 1.55;
+    font-size: 18px;
+    color: #888888;
+}
+
+.contact-form{
+    background-color: #888888;
+    min-width: 300px;
+    width: 100%;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
 
 .footer{
+    min-height: 500px;
     text-align: center;
+    background-color: grey;
 }
 
 .clearfix:after{
