@@ -86,33 +86,31 @@
             </section>
 
             <section id="contacto" class="row-flex section-reverse">
+                <form id="form" class="contact-form container" method="get" novalidate>
 
-                <div class="contact-form container">
-                    <h3 class="contact-tittle">Contacto</h3>
-                    <div class="row-flex form-text">
-                        <div class="flex-item">
-                            <input id="contact-name" class="form-item" type="text" placeholder="Nombre">
+                        <h3 class="contact-tittle">Contacto</h3>
+                        <div class="row-flex form-text">
+                            <div class="flex-item">
+                                <input id="contact-name" name="name" class="form-item" type="text" placeholder="Nombre" required>
+                            </div>
+                            <div class="flex-item">
+                                <input id="contact-email" name="email" class="form-item"  type="text" placeholder="eMail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                            </div>
+                            <div class="flex-item">
+                                <input id="contact-phone" name="phone" class="form-item" type="text" placeholder="Teléfono" required>
+                            </div>
                         </div>
-                        <div class="flex-item">
-                            <input id="contact-email" class="form-item"  type="text" placeholder="eMail">
+                        <div class="row-flex form-text">
+                            <div class="flex-item">
+                                <textarea name="message" id="contact-comment" cols="30" rows="10" class="form-textarea" placeholder="Mensaje"></textarea>
+                            </div>
                         </div>
-                        <div class="flex-item">
-                            <input id="contact-phone" class="form-item" type="text" placeholder="Teléfono">
+                        <div class="row-flex form-text">
+                            <div class="flex-item">
+                                <button type="submit" id="send-form" name="comment" class="form-button">Enviar</button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row-flex form-text">
-                        <div class="flex-item">
-                            <textarea name="message" id="" cols="30" rows="10" class="form-textarea" placeholder="Mensaje"></textarea>
-                        </div>
-                    </div>
-                    <div class="row-flex form-text">
-                        <div class="flex-item">
-                            <button type="submit" class="form-button">Enviar</button>
-                        </div>
-                    </div>
-                </div>
-
-
+                </form>
             </section>
 
         </main>
@@ -123,4 +121,6 @@
 
         </footer>
     </body>
+
+    <script src="js/form.js"></script>
 </html>
