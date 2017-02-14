@@ -33,7 +33,7 @@ form.addEventListener("submit", function(event){ //Submit es cada vez que se qui
     var phoneInput = document.getElementById("contact-phone");
     var commentInput = document.getElementById("contact-comment");
     var knownInput = document.getElementById("contact-known");
-    var submitInput = document.getElementById("send-form");
+    var knownComment = document.getElementById("known-input");
 
     if(nameInput.checkValidity() == false) {
         alert("Escribe tu nombre");
@@ -67,29 +67,30 @@ form.addEventListener("submit", function(event){ //Submit es cada vez que se qui
         return false;
     }else{
         var words = commentInput.value.match(/\S+/g).length;
-        debugger;
-        if (words > 150) {
-            alert("Te has pasao, has puesto " + words);
+        if (words >= 150) {
+            alert("Te has pasado, has puesto más de " + words + " palabras");
             event.preventDefault();
             return false;
-        } else {
-            alert ("Menos");
-
         }
     }
 
-    if (knownInput.value=='Otros'){
-        debugger
+    if (knownInput.value=='Otros' && knownComment && knownComment.checkValidity() == false){
+        alert("Escribe cómo me conociste");
+        knownComment.classList.add("error");
+        knownComment.focus();
+        event.preventDefault();
+        return false;
     }
 
 
 
-    submitInput({
+    sendForm({
         'name': nameInput.value,
-        'phone': phoneInput.value,
         'email': emailInput.value,
-        'known': knownInput.val(),
-        'comment': commentInput.val()
+        'phone': phoneInput.value,
+        'comment': commentInput.value,
+        'known-comment': (knownComment) ? knownComment.value : '',
+        'known': knownInput.value
     });
 
     event.preventDefault();

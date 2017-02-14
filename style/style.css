@@ -260,5 +260,10 @@ p.text-divisor:before { /*isn't work*/
 }
 
 .error{
+
     border: 1px solid red;
+}
+
+.error:focus{
+    outline: none;
 }
