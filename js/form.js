@@ -1,20 +1,38 @@
-/**
- * Created by carlos on 10/2/17.
- */
+
 var form = document.getElementById("form"); //Creamos una variable que nos coja el formulario
 
 //Vamos a validar el formulario
+
+var contactKnownSelected = document.getElementById("contact-known");
+var containerKnownInput = document.getElementById("container-knowninput");
+
+var knownInput = document.createElement("input");
+
+knownInput.setAttribute("id", "known-input"); // el segundo parámetro es el valor que queremos que tome
+knownInput.setAttribute("type", "text");
+knownInput.setAttribute("class", " form-item");
+knownInput.setAttribute("name", "known-input");
+knownInput.setAttribute("placeholder", "¿Cómo me has conocido?");
+knownInput.setAttribute("required", "");
+
+contactKnownSelected.addEventListener("change", function (event) {
+
+    if(event.currentTarget.value == 'Otros') {
+        containerKnownInput.appendChild(knownInput); //Añadimos al padre el input
+    } else { //Por si apretamos varias veces el no, que no salte el error.
+        containerKnownInput.removeChild(knownInput);//Eliminamos el campo apellido
+    }
+});
+
+
 form.addEventListener("submit", function(event){ //Submit es cada vez que se quiera enviar
-
-debugger;
-//Cogemos todos los inputs que compnen mi html
-
 
 
     var nameInput = document.getElementById("contact-name");
     var emailInput = document.getElementById("contact-email");
     var phoneInput = document.getElementById("contact-phone");
     var commentInput = document.getElementById("contact-comment");
+    var knownInput = document.getElementById("contact-known");
     var submitInput = document.getElementById("send-form");
 
     if(nameInput.checkValidity() == false) {
@@ -27,6 +45,7 @@ debugger;
 
     if(emailInput.checkValidity() == false) {
         alert("Escribe tu email");
+        emailInput.classList.add("error");
         emailInput.focus();
         event.preventDefault();
         return false;
@@ -34,47 +53,48 @@ debugger;
 
     if(phoneInput.checkValidity() == false) {
         alert("Escribe tu teléfono");
+        phoneInput.classList.add("error");
         phoneInput.focus();
         event.preventDefault();
         return false;
     }
 
-    if(phoneInput.checkValidity() == false) {
+    if(commentInput.checkValidity() == false) {
         alert("Escribe tu comentario");
+        commentInput.classList.add("error");
         commentInput.focus();
         event.preventDefault();
         return false;
+    }else{
+        var words = commentInput.value.match(/\S+/g).length;
+        debugger;
+        if (words > 150) {
+            alert("Te has pasao, has puesto " + words);
+            event.preventDefault();
+            return false;
+        } else {
+            alert ("Menos");
+
+        }
+    }
+
+    if (knownInput.value=='Otros'){
+        debugger
     }
 
 
-    // if(document.getElementById("apellidos")) {
-    //     if(document.getElementById("apellidos").checkValidity() == false){
-    //         alert("Escribe tus apellidos");
-    //         document.getElementById("apellidos").focus();
-    //         event.preventDefault();
-    //         return false; //Si no pusieramos el false nos saltarían alarmas de todos los campos que faltan por poner todas las veces. De esta forma saltan de uno en uno
-    //     }
-    // }
-    //
 
-    // if(misionesRadioInput.mision1.checkValidity() == false) {
-    //     alert("Introduce el tipo de mision");
-    //     event.preventDefault(); //Prevenimos el comportamiento por defecto. Sin esto envía igual el formulario
-    //     return false;
-    // }
-
-    // //=== comprueba valor y tipo, esta siempre es la recomendada
-    // if(phoneInput.style.display === 'block') { //Si está en block es que está visible y hay que validarlo
-    //     if(estasSeguroRadioInput.seguro_si.checkValidity() == false){
-    //         alert("Confirmanos que estás seguro");
-    //         event.preventDefault();
-    //         return false;
-    //     }
-    // }
-
-
+    submitInput({
+        'name': nameInput.value,
+        'phone': phoneInput.value,
+        'email': emailInput.value,
+        'known': knownInput.val(),
+        'comment': commentInput.val()
+    });
 
     event.preventDefault();
+    return false;
+
 
     setTimeout(function(){
         sendNotification("Formulario enviado correctamente");

@@ -94,15 +94,31 @@
                                 <input id="contact-name" name="name" class="form-item" type="text" placeholder="Nombre" required>
                             </div>
                             <div class="flex-item">
-                                <input id="contact-email" name="email" class="form-item"  type="text" placeholder="eMail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                                <input id="contact-email" name="email" class="form-item"  type="text" placeholder="eMail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$" required>
                             </div>
                             <div class="flex-item">
-                                <input id="contact-phone" name="phone" class="form-item" type="text" placeholder="Teléfono" required>
+                                <input id="contact-phone" name="phone" class="form-item" type="text" placeholder="Teléfono" pattern="[0-9]{0,9}$" required>
+                            </div>
+                        </div>
+                        <div class="row-flex form-text">
+                            <div class="flex-item text-left">
+                                <label>¿Cómo me has conocido?</label>
+                            </div>
+                            <div class="flex-item text-left">
+                                <select id="contact-known" name="contact-known"  required>
+                                    <option value="Google">Google</option>
+                                    <option value="Linkedin">Linkedin</option>
+                                    <option value="Facebook">Facebook</option>
+                                    <option value="Otros">Otros</option>
+                                </select>
+                            </div>
+                            <div id="container-knowninput" class="flex-item text-left">
+
                             </div>
                         </div>
                         <div class="row-flex form-text">
                             <div class="flex-item">
-                                <textarea name="message" id="contact-comment" cols="30" rows="10" class="form-textarea" placeholder="Mensaje"></textarea>
+                                <textarea name="message" id="contact-comment" cols="30" rows="10" class="form-textarea" placeholder="Mensaje" required></textarea>
                             </div>
                         </div>
                         <div class="row-flex form-text">

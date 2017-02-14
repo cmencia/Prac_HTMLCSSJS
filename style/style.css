@@ -174,6 +174,11 @@ p.text-divisor:before { /*isn't work*/
 
 }
 
+.text-left{
+    text-align: left;
+    padding-left: 15px;
+}
+
 .studies-tittle {
     font-family: 'Cinzel', serif;
     font-size: 40px;
@@ -252,4 +257,8 @@ p.text-divisor:before { /*isn't work*/
     display: block;
     height: 0;
     clear: both;
+}
+
+.error{
+    border: 1px solid red;
 }
