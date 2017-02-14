@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56df602a-077d-4512-a6ab-8c360570d8aa" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/form.js" afterPath="$PROJECT_DIR$/js/form.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style/style.css" afterPath="$PROJECT_DIR$/style/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/workspace.xml" afterPath="$PROJECT_DIR$/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -197,7 +194,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="configurable.group.other" />
+    <property name="settings.editor.selected.configurable" value="preferences.customizations" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="FullScreen" value="true" />
@@ -793,7 +790,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1486638460068</updated>
-      <workItem from="1486638461605" duration="29140000" />
+      <workItem from="1486638461605" duration="29280000" />
     </task>
     <task id="LOCAL-00001" summary="First commit - Html Structure">
       <created>1486641646959</created>
@@ -844,11 +841,18 @@
       <option name="project" value="LOCAL" />
       <updated>1486734920534</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Know input + class added">
+      <created>1487081904263</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1487081904263</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29140000" />
+    <option name="totallyTimeSpent" value="29280000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="-55" width="1920" height="1080" extended-state="0" />
@@ -930,7 +934,8 @@
     <MESSAGE value="Contact form started" />
     <MESSAGE value="Form html done" />
     <MESSAGE value="Form validity" />
-    <option name="LAST_COMMIT_MESSAGE" value="Form validity" />
+    <MESSAGE value="Know input + class added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Know input + class added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
